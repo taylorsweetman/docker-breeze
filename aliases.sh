@@ -19,7 +19,7 @@ dri() {
         return 2
     fi
 
-    docker run -it $*
+    docker run -it --rm $*
     return 0
 }
 
