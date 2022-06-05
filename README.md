@@ -13,14 +13,17 @@ docker run -it --rm ...
 every time you want to run a container!? Not me.
 
 ## Current Aliases & Functions
-
-- `d-c` :arrow_right:  `docker-compose`
+- ### Docker Compose
+  - `d-c` :arrow_right:  `docker-compose`
   - Shortcut for the unfortunately verbose `docker-compose` command.
-- `db <IMAGE_NAME>` :arrow_right: `docker build -t <IMAGE_NAME> .`
+- ### Docker Build
+  - `db <IMAGE_NAME>` :arrow_right: `docker build -t <IMAGE_NAME> .`
   - Builds a Docker image with <IMAGE_NAME> from the source code in the current working directory. 
-- `dri <IMAGE_NAME> <OPTIONAL_ARGS>` :arrow_right: `docker run -it <IMAGE_NAME> <OPTIONAL_ARGS>`
+- ### Docker Run Interactive
+  - `dri <IMAGE_NAME> <OPTIONAL_ARGS>` :arrow_right: `docker run -it <IMAGE_NAME> <OPTIONAL_ARGS>`
   - Runs a container in interactive mode based off image: <IMAGE_NAME>. 
   - Will pass <OPTIONAL_ARGS> to the container.
-- `drd <IMAGE_NAME> <OPTIONAL_ARGS>` :arrow_right: `docker run -d <IMAGE_NAME> <OPTIONAL_ARGS>`
+- ### Docker Run Detached
+  - `drd <IMAGE_NAME> <OPTIONAL_ARGS>` :arrow_right: `docker run -d <IMAGE_NAME> <OPTIONAL_ARGS>`
   - Runs a container in detached mode based off image: <IMAGE_NAME>. 
   - Will pass <OPTIONAL_ARGS> to the container.
