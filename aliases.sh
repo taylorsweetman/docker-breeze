@@ -12,6 +12,19 @@ db() {
     return 0
 }
 
+# docker build here
+dbh() {
+    if [ $# -ne 0 ]; then
+        echo "This command does not take any arguments."
+        return 2
+    fi
+
+    IMAGE_NAME=$(pwd | awk -F '/' '{print $NF}')
+
+    docker build -t $IMAGE_NAME .
+    return 0
+}
+
 # docker run interactive
 dri() {
     if [ $# -lt 1 ]; then
