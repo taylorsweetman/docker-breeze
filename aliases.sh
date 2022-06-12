@@ -36,6 +36,14 @@ dri() {
     return 0
 }
 
+# docker run interactive here
+drih() {
+    IMAGE_NAME=$(pwd | awk -F '/' '{print $NF}')
+
+    docker run -it --rm $* $IMAGE_NAME
+    return 0
+}
+
 # docker run detached
 drd() {
     if [ $# -lt 1 ]; then
@@ -44,5 +52,13 @@ drd() {
     fi
 
     docker run -d $*
+    return 0
+}
+
+# docker run detached here
+drdh() {
+    IMAGE_NAME=$(pwd | awk -F '/' '{print $NF}')
+
+    docker run -d $* $IMAGE_NAME
     return 0
 }

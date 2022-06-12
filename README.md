@@ -38,8 +38,20 @@ every time you want to run a container!? Not me.
   - Runs a container in interactive mode based off image: <IMAGE_NAME>.
   - Will pass <OPTIONAL_ARGS> to the container.
 
+- ### Docker Run Interactive Here
+
+  - `drih <OPTIONAL_ARGS>` :arrow_right: `docker run -it --rm <CURRENT_DIR_NAME> <OPTIONAL_ARGS>`
+  - Runs a container in interactive mode based off image with the name of the current directory <CURRENT_DIR_NAME>.
+  - Will pass <OPTIONAL_ARGS> to the container.
+
 - ### Docker Run Detached
 
   - `drd <IMAGE_NAME> <OPTIONAL_ARGS>` :arrow_right: `docker run -d <IMAGE_NAME> <OPTIONAL_ARGS>`
   - Runs a container in detached mode based off image: <IMAGE_NAME>.
+  - Will pass <OPTIONAL_ARGS> to the container.
+
+- ### Docker Run Detached Here
+
+  - `drdh <OPTIONAL_ARGS>` :arrow_right: `docker run -d <CURRENT_DIR_NAME> <OPTIONAL_ARGS>`
+  - Runs a container in detached mode with the name of the current directory <CURRENT_DIR_NAME>.
   - Will pass <OPTIONAL_ARGS> to the container.
