@@ -1,6 +1,21 @@
 # docker compose
 alias d-c="docker-compose"
 
+# docker ps
+alias dps="docker ps -a"
+
+# docker container prune
+alias dcp="docker container prune"
+
+# docker image prune
+alias dip="docker image prune"
+
+# docker image ls
+alias dils="docker image ls"
+
+# docker image rm
+alias dirm="docker image rm"
+
 # docker build
 db() {
     if [ $# -ne 1 ]; then
