@@ -20,7 +20,7 @@ This CLI is currently available for `bash` and `zsh` via the installation script
 
 ```shell
 git clone https://github.com/taylorsweetman/docker-breeze.git ~/.docker_breeze
-~/.scm_breeze/install.sh
+~/.docker_breeze/install.sh
 source ~/.bashrc   # or source "${ZDOTDIR:-$HOME}/.zshrc"
 ```
 
