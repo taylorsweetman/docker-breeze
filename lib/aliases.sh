@@ -11,7 +11,10 @@ alias dcp="docker container prune"
 alias dip="docker image prune"
 
 # docker image ls
-alias dils="docker image ls"
+dils() {
+    OUTPUT=$(docker image ls)
+    echo $OUTPUT
+}
 
 # docker image rm
 alias dirm="docker image rm"
