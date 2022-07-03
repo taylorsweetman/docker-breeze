@@ -20,8 +20,20 @@ This CLI is currently available for `bash` and `zsh` via the installation script
 
 ```shell
 git clone https://github.com/taylorsweetman/docker-breeze.git ~/.docker_breeze
-~/.scm_breeze/install.sh
+~/.docker_breeze/install.sh
 source ~/.bashrc   # or source "${ZDOTDIR:-$HOME}/.zshrc"
+```
+
+**Note:**
+
+In order for Docker Breeze to work properly, your user must be a member of the docker group.
+
+If this is not the case, run the following:
+
+```shell
+sudo groupadd docker
+sudo gpasswd -a $USER docker
+newgrp docker
 ```
 
 ## Current Aliases & Functions
