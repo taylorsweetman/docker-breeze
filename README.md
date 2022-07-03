@@ -24,6 +24,18 @@ git clone https://github.com/taylorsweetman/docker-breeze.git ~/.docker_breeze
 source ~/.bashrc   # or source "${ZDOTDIR:-$HOME}/.zshrc"
 ```
 
+**Note:**
+
+In order for Docker Breeze to work properly, your user must be a member of the docker group.
+
+If this is not the case, run the following:
+
+```shell
+sudo groupadd docker
+sudo gpasswd -a $USER docker
+newgrp docker
+```
+
 ## Current Aliases & Functions
 
 - ### Docker Compose
