@@ -2,7 +2,10 @@
 alias d-c="docker-compose"
 
 # docker ps
-alias dps="docker ps -a"
+alias dps="docker ps"
+
+# docker ps -a
+alias dpsa="docker ps -a"
 
 # docker container prune
 alias dcp="docker container prune"
