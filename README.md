@@ -43,6 +43,36 @@ newgrp docker
   - `d-c` :arrow_right: `docker-compose`
   - Shortcut for the unfortunately verbose `docker-compose` command.
 
+- ### Docker PS
+
+  - `dps` :arrow_right: `docker ps`
+  - Lists all running containers.
+
+- ### Docker PS All
+
+  - `dpsa` :arrow_right: `docker ps -a`
+  - Lists all containers, including stopped ones.
+
+- ### Docker Container Prune
+
+  - `dcp` :arrow_right: `docker container prune`
+  - Prunes non-running containers.
+
+- ### Docker Image Prune
+
+  - `dip` :arrow_right: `docker image prune`
+  - Prunes dangling images.
+
+- ### Docker Image ls
+
+  - `dils` :arrow_right: `docker image ls`
+  - Lists current images.
+
+- ### Docker Remove Image
+
+  - `dirm <IMAGE_ID>` :arrow_right: `docker image rm <IMAGE_ID>`
+  - Removes the specified image.
+
 - ### Docker Build
 
   - `db <IMAGE_NAME>` :arrow_right: `docker build -t <IMAGE_NAME> .`
