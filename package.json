@@ -2,7 +2,9 @@
   "name": "docker-breeze",
   "version": "1.0.0",
   "description": "## Description",
-  "main": "bin/index.js",
+  "bin": {
+    "db": "bin/index.js"
+  },
   "directories": {
     "lib": "lib"
   },
