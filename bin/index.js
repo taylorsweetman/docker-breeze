@@ -7,6 +7,14 @@ const toStdOut = (buf) => {
   console.log(buf.toString().slice(0, -1));
 };
 
+const toStdOutWithIdxs = (buf) => {
+  const lines = buf.toString().split("\n");
+  const linesWithIdxs = lines.map((line, idx) => {
+    return idx && line ? `${line}   [${idx}]` : line;
+  });
+  console.log(linesWithIdxs.join("\n"));
+};
+
 const spawnNewPipedProcess = (command, args) => {
   const spawnedProc = spawn(command, [...args], {
     shell: true,
@@ -40,7 +48,7 @@ const main = async () => {
         const dps = options.all
           ? execSync("docker ps -a")
           : execSync("docker ps");
-        toStdOut(dps);
+        toStdOutWithIdxs(dps);
       });
 
     program
@@ -48,7 +56,7 @@ const main = async () => {
       .description("List images")
       .action(() => {
         const ls = execSync("docker image ls");
-        toStdOut(ls);
+        toStdOutWithIdxs(ls);
       });
 
     program
