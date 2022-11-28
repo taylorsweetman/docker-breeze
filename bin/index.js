@@ -65,6 +65,15 @@ const main = async () => {
         spawnNewPipedProcess("docker", ["image", "prune"]);
       });
 
+    program
+      .command("irm")
+      .description("Remove a an image by ID")
+      .argument("<imageId>", "The ID of the image to remove")
+      .action((imageId) => {
+        const irm = execSync(`docker image rm ${imageId}`);
+        toStdOut(irm);
+      });
+
     program.parse();
   } catch (error) {}
 };
