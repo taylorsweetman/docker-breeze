@@ -44,6 +44,14 @@ const main = async () => {
       });
 
     program
+      .command("ls")
+      .description("List images")
+      .action(() => {
+        const ls = execSync("docker image ls");
+        toStdOut(ls);
+      });
+
+    program
       .command("cpr")
       .description("Prune all non-running containers")
       .action(() => {
