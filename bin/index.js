@@ -12,7 +12,7 @@ const toStdOutWithIdxs = (buf) => {
   const linesWithIdxs = lines.map((line, idx) => {
     return idx && line ? `${line}   [${idx}]` : line;
   });
-  console.log(linesWithIdxs.join("\n"));
+  console.log(linesWithIdxs.join("\n").slice(0, -1));
 };
 
 const spawnNewPipedProcess = (command, args) => {
